@@ -1,7 +1,7 @@
 packet QRoutingHello
 {
     int srcNodeId;
-    double x;       // position for distance-based cost
+    double x;
     double y;
 }
 
@@ -17,5 +17,7 @@ packet QData
     int srcId;
     int destId;
     int seqNum;
-    simtime_t timestamp;  // for delay measurement
+    int ttl = 32;            // plain initialiser
+    int hopCount = 0;        // plain initialiser
+    simtime_t timestamp;
 }

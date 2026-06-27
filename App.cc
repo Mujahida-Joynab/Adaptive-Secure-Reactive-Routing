@@ -9,6 +9,7 @@ class App : public cSimpleModule
     int myId;
     int seqNum = 0;
     cMessage *timer;
+    simsignal_t packetReceivedSignal;   // NEW
 
   protected:
     virtual void initialize() override;
@@ -22,13 +23,14 @@ void App::initialize()
     myId = par("nodeId");
     timer = new cMessage("gen");
     scheduleAt(simTime() + par("trafficRate"), timer);
+    packetReceivedSignal = registerSignal("packetReceived");   // NEW
 }
 
 void App::handleMessage(cMessage *msg)
 {
     if (msg == timer) {
         // choose a random destination (not self)
-        int numNodes = getSystemModule()->par("numNodes"); // we'll set in ini
+        int numNodes = getSystemModule()->par("numNodes");
         int dest = intrand(numNodes);
         while (dest == myId)
             dest = intrand(numNodes);
@@ -47,6 +49,10 @@ void App::handleMessage(cMessage *msg)
         EV << "App: received packet from " << data->getSrcId()
            << " seq=" << data->getSeqNum()
            << " delay=" << simTime() - data->getTimestamp() << endl;
-        delete msg;
+
+        // Emit signal for CSV collection (pass the packet object)
+        emit(packetReceivedSignal, data);
+
+        delete msg;   // packet is owned by App, so delete after use
     }
 }

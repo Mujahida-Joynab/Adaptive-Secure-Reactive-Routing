@@ -6,7 +6,7 @@ module Node
         double updateInterval @unit(s) = default(1s);
         double costMetric = default(1.0);
         double trafficRate @unit(s) = default(exponential(1s));
-        @display("p=100,100;i=device/wifilaptop");
+        @display("p=100,100;i=device/wifilaptop;bgb=1309,484");
 
     gates:
         input in[];
@@ -17,7 +17,7 @@ module Node
             parameters:
                 nodeId = parent.nodeId;
                 trafficRate = parent.trafficRate;
-            @display("p=100,50");
+                @display("p=845,216");
         }
         routing: QRouting {
             parameters:
@@ -25,10 +25,10 @@ module Node
                 alpha = parent.alpha;
                 updateInterval = parent.updateInterval;
                 costMetric = parent.costMetric;
-            @display("p=100,150");
+                @display("p=532,160");
         }
         mobility: Mobility {
-            @display("p=200,150");
+            @display("p=1136,377");
         }
 
     connections:

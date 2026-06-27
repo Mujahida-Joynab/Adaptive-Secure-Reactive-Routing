@@ -12,3 +12,15 @@ out/
 
 # Executable
 QRouting
+# CSV result files
+*.csv
+
+# Executable
+QRouting
+
+# OMNeT++ output folder
+out/
+
+# Generated message files
+*_m.cc
+*_m.h

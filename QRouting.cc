@@ -144,6 +144,11 @@ void QRouting::forwardData(QData *data)
     }
     // find gate index to that neighbor
     int gateIdx = neighbors[bestNb].gateIndex;
+
+    // ------------------- ADDED LINE -------------------
+    data->setHopCount(data->getHopCount() + 1);
+    // -------------------------------------------------
+
     send(data, "out", gateIdx);
 }
 
