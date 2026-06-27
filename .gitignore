@@ -1,0 +1,14 @@
+# Compiled output
+out/
+*.o
+*.obj
+
+# Message compiler generated
+*_m.cc
+*_m.h
+
+# Network compiler generated
+*_n.cc
+
+# Executable
+QRouting
