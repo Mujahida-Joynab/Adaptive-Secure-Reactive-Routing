@@ -1,12 +1,11 @@
-module NodeFL
+module Node
 {
     parameters:
         int nodeId;
-        double alpha = default(0.001);
+        double alpha = default(0.7);
         double updateInterval @unit(s) = default(1s);
-        double costMetric = default(1.0);   // not used
+        double costMetric = default(1.0);
         double trafficRate @unit(s) = default(exponential(1s));
-        double flInterval @unit(s) = default(10s);
         @display("p=100,100;i=device/wifilaptop");
 
     gates:
@@ -20,17 +19,12 @@ module NodeFL
                 trafficRate = parent.trafficRate;
             @display("p=100,50");
         }
-        routing: MADRLRouting_FL {
+        routing: QRouting {
             parameters:
                 nodeId = parent.nodeId;
                 alpha = parent.alpha;
                 updateInterval = parent.updateInterval;
-                discountFactor = 0.9;
-                replayCapacity = 100;
-                batchSize = 16;
-                hiddenDim = 16;
-                epsilon = 0.3;
-                flInterval = parent.flInterval;
+                costMetric = parent.costMetric;
             @display("p=100,150");
         }
         mobility: Mobility {

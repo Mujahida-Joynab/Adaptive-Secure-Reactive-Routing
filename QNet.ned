@@ -15,8 +15,8 @@ network QNet
         }
 
     connections:
-        for i=0..numNodes-1 {
-            node[i].out++ --> node[(i+1) % numNodes].in++;
-            node[i].in++ <-- node[(i+1) % numNodes].out++;
+        for i=0..numNodes-2 {
+            node[i].out++ --> node[i+1].in++;
+            node[i].in++ <-- node[i+1].out++;
         }
 }

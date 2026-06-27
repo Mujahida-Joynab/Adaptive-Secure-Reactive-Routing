@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for QRouting
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -o QRouting -O out
+#  opp_makemake -f --deep -O out -I.
 #
 
 # Name of target to be created (-o option)
@@ -17,7 +17,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(QTENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(QTENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH =
+INCLUDE_PATH = -I.
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -80,6 +80,8 @@ endif
 
 #------------------------------------------------------------------------------
 # User-supplied makefile fragment(s)
+-include makefrag
+
 #------------------------------------------------------------------------------
 
 # Main target
