@@ -21,3 +21,9 @@ packet QData
     int hopCount = 0;        // plain initialiser
     simtime_t timestamp;
 }
+packet FLModel
+{
+    int srcId;
+    int destId;
+    double weights[];   // flattened model weights
+}

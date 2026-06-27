@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for QRouting
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -I.
+#  opp_makemake -f --deep -o QRouting -O out
 #
 
 # Name of target to be created (-o option)
@@ -17,7 +17,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(QTENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(QTENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I.
+INCLUDE_PATH =
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -31,7 +31,13 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
-OBJS = $O/App.o $O/CsvCollector.o $O/Mobility.o $O/QRouting.o $O/QRoutingMessages_m.o
+OBJS = \
+    $O/App.o \
+    $O/CsvCollector.o \
+    $O/MADRLRouting_FL.o \
+    $O/Mobility.o \
+    $O/QRouting.o \
+    $O/QRoutingMessages_m.o
 
 # Message files
 MSGFILES = \
@@ -74,8 +80,6 @@ endif
 
 #------------------------------------------------------------------------------
 # User-supplied makefile fragment(s)
--include makefrag
-
 #------------------------------------------------------------------------------
 
 # Main target

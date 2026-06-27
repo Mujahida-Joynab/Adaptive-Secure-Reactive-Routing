@@ -4,7 +4,7 @@ module NodeFL
         int nodeId;
         double alpha = default(0.001);
         double updateInterval @unit(s) = default(1s);
-        double costMetric = default(1.0);   // not used
+        double costMetric = default(1.0);
         double trafficRate @unit(s) = default(exponential(1s));
         double flInterval @unit(s) = default(10s);
         @display("p=100,100;i=device/wifilaptop");
