@@ -1,0 +1,1586 @@
+version 3
+run Node50-0-20260629-03:00:51-2260
+attr configname Node50
+attr datetime 20260629-03:00:51
+attr datetimef 20260629-030051
+attr experiment Node50
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network QNet_FL
+attr processid 2260
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network QNet_FL
+config **.numNodes 50
+config **.mobility.speed 15mps
+config sim-time-limit 200s
+config repeat 3
+config seed-set 0
+config **.alpha 0.7
+config **.updateInterval 1s
+config **.costMetric 1.0
+config **.trafficRate exponential(1s)
+config **.mobility.maxX 1500
+config **.mobility.maxY 1500
+
+par QNet_FL.collector typename "\"CsvCollector\""
+par QNet_FL.collector csvFile "\"results-${configname}-${repetition}.csv\""
+par QNet_FL.node[0].app typename "\"App\""
+par QNet_FL.node[0].app nodeId 0
+par QNet_FL.node[0].app trafficRate 0.7958745045657755s
+attr unit s
+par QNet_FL.node[0].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[0].routing nodeId 0
+par QNet_FL.node[0].routing alpha 0.7
+par QNet_FL.node[0].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[0].routing discountFactor 0.9
+par QNet_FL.node[0].routing replayCapacity 100
+par QNet_FL.node[0].routing batchSize 16
+par QNet_FL.node[0].routing hiddenDim 16
+par QNet_FL.node[0].routing epsilon 0.3
+par QNet_FL.node[0].routing flInterval 10s
+attr unit s
+par QNet_FL.node[0].mobility typename "\"Mobility\""
+par QNet_FL.node[0].mobility maxX 1500
+par QNet_FL.node[0].mobility maxY 1500
+par QNet_FL.node[0].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[0] typename "\"NodeFL\""
+par QNet_FL.node[0] nodeId 0
+par QNet_FL.node[0] alpha 0.7
+par QNet_FL.node[0] updateInterval 1s
+attr unit s
+par QNet_FL.node[0] costMetric 1
+par QNet_FL.node[0] trafficRate 0.7958745045657755s
+attr unit s
+par QNet_FL.node[0] flInterval 10s
+attr unit s
+par QNet_FL.node[1].app typename "\"App\""
+par QNet_FL.node[1].app nodeId 1
+par QNet_FL.node[1].app trafficRate 0.8985603884839412s
+attr unit s
+par QNet_FL.node[1].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[1].routing nodeId 1
+par QNet_FL.node[1].routing alpha 0.7
+par QNet_FL.node[1].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[1].routing discountFactor 0.9
+par QNet_FL.node[1].routing replayCapacity 100
+par QNet_FL.node[1].routing batchSize 16
+par QNet_FL.node[1].routing hiddenDim 16
+par QNet_FL.node[1].routing epsilon 0.3
+par QNet_FL.node[1].routing flInterval 10s
+attr unit s
+par QNet_FL.node[1].mobility typename "\"Mobility\""
+par QNet_FL.node[1].mobility maxX 1500
+par QNet_FL.node[1].mobility maxY 1500
+par QNet_FL.node[1].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[1] typename "\"NodeFL\""
+par QNet_FL.node[1] nodeId 1
+par QNet_FL.node[1] alpha 0.7
+par QNet_FL.node[1] updateInterval 1s
+attr unit s
+par QNet_FL.node[1] costMetric 1
+par QNet_FL.node[1] trafficRate 0.8985603884839412s
+attr unit s
+par QNet_FL.node[1] flInterval 10s
+attr unit s
+par QNet_FL.node[2].app typename "\"App\""
+par QNet_FL.node[2].app nodeId 2
+par QNet_FL.node[2].app trafficRate 1.2559307580473893s
+attr unit s
+par QNet_FL.node[2].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[2].routing nodeId 2
+par QNet_FL.node[2].routing alpha 0.7
+par QNet_FL.node[2].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[2].routing discountFactor 0.9
+par QNet_FL.node[2].routing replayCapacity 100
+par QNet_FL.node[2].routing batchSize 16
+par QNet_FL.node[2].routing hiddenDim 16
+par QNet_FL.node[2].routing epsilon 0.3
+par QNet_FL.node[2].routing flInterval 10s
+attr unit s
+par QNet_FL.node[2].mobility typename "\"Mobility\""
+par QNet_FL.node[2].mobility maxX 1500
+par QNet_FL.node[2].mobility maxY 1500
+par QNet_FL.node[2].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[2] typename "\"NodeFL\""
+par QNet_FL.node[2] nodeId 2
+par QNet_FL.node[2] alpha 0.7
+par QNet_FL.node[2] updateInterval 1s
+attr unit s
+par QNet_FL.node[2] costMetric 1
+par QNet_FL.node[2] trafficRate 1.2559307580473893s
+attr unit s
+par QNet_FL.node[2] flInterval 10s
+attr unit s
+par QNet_FL.node[3].app typename "\"App\""
+par QNet_FL.node[3].app nodeId 3
+par QNet_FL.node[3].app trafficRate 1.8596042120746687s
+attr unit s
+par QNet_FL.node[3].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[3].routing nodeId 3
+par QNet_FL.node[3].routing alpha 0.7
+par QNet_FL.node[3].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[3].routing discountFactor 0.9
+par QNet_FL.node[3].routing replayCapacity 100
+par QNet_FL.node[3].routing batchSize 16
+par QNet_FL.node[3].routing hiddenDim 16
+par QNet_FL.node[3].routing epsilon 0.3
+par QNet_FL.node[3].routing flInterval 10s
+attr unit s
+par QNet_FL.node[3].mobility typename "\"Mobility\""
+par QNet_FL.node[3].mobility maxX 1500
+par QNet_FL.node[3].mobility maxY 1500
+par QNet_FL.node[3].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[3] typename "\"NodeFL\""
+par QNet_FL.node[3] nodeId 3
+par QNet_FL.node[3] alpha 0.7
+par QNet_FL.node[3] updateInterval 1s
+attr unit s
+par QNet_FL.node[3] costMetric 1
+par QNet_FL.node[3] trafficRate 1.8596042120746687s
+attr unit s
+par QNet_FL.node[3] flInterval 10s
+attr unit s
+par QNet_FL.node[4].app typename "\"App\""
+par QNet_FL.node[4].app nodeId 4
+par QNet_FL.node[4].app trafficRate 0.923223131470796s
+attr unit s
+par QNet_FL.node[4].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[4].routing nodeId 4
+par QNet_FL.node[4].routing alpha 0.7
+par QNet_FL.node[4].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[4].routing discountFactor 0.9
+par QNet_FL.node[4].routing replayCapacity 100
+par QNet_FL.node[4].routing batchSize 16
+par QNet_FL.node[4].routing hiddenDim 16
+par QNet_FL.node[4].routing epsilon 0.3
+par QNet_FL.node[4].routing flInterval 10s
+attr unit s
+par QNet_FL.node[4].mobility typename "\"Mobility\""
+par QNet_FL.node[4].mobility maxX 1500
+par QNet_FL.node[4].mobility maxY 1500
+par QNet_FL.node[4].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[4] typename "\"NodeFL\""
+par QNet_FL.node[4] nodeId 4
+par QNet_FL.node[4] alpha 0.7
+par QNet_FL.node[4] updateInterval 1s
+attr unit s
+par QNet_FL.node[4] costMetric 1
+par QNet_FL.node[4] trafficRate 0.923223131470796s
+attr unit s
+par QNet_FL.node[4] flInterval 10s
+attr unit s
+par QNet_FL.node[5].app typename "\"App\""
+par QNet_FL.node[5].app nodeId 5
+par QNet_FL.node[5].app trafficRate 1.9515453358844626s
+attr unit s
+par QNet_FL.node[5].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[5].routing nodeId 5
+par QNet_FL.node[5].routing alpha 0.7
+par QNet_FL.node[5].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[5].routing discountFactor 0.9
+par QNet_FL.node[5].routing replayCapacity 100
+par QNet_FL.node[5].routing batchSize 16
+par QNet_FL.node[5].routing hiddenDim 16
+par QNet_FL.node[5].routing epsilon 0.3
+par QNet_FL.node[5].routing flInterval 10s
+attr unit s
+par QNet_FL.node[5].mobility typename "\"Mobility\""
+par QNet_FL.node[5].mobility maxX 1500
+par QNet_FL.node[5].mobility maxY 1500
+par QNet_FL.node[5].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[5] typename "\"NodeFL\""
+par QNet_FL.node[5] nodeId 5
+par QNet_FL.node[5] alpha 0.7
+par QNet_FL.node[5] updateInterval 1s
+attr unit s
+par QNet_FL.node[5] costMetric 1
+par QNet_FL.node[5] trafficRate 1.9515453358844626s
+attr unit s
+par QNet_FL.node[5] flInterval 10s
+attr unit s
+par QNet_FL.node[6].app typename "\"App\""
+par QNet_FL.node[6].app nodeId 6
+par QNet_FL.node[6].app trafficRate 0.7872011399819205s
+attr unit s
+par QNet_FL.node[6].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[6].routing nodeId 6
+par QNet_FL.node[6].routing alpha 0.7
+par QNet_FL.node[6].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[6].routing discountFactor 0.9
+par QNet_FL.node[6].routing replayCapacity 100
+par QNet_FL.node[6].routing batchSize 16
+par QNet_FL.node[6].routing hiddenDim 16
+par QNet_FL.node[6].routing epsilon 0.3
+par QNet_FL.node[6].routing flInterval 10s
+attr unit s
+par QNet_FL.node[6].mobility typename "\"Mobility\""
+par QNet_FL.node[6].mobility maxX 1500
+par QNet_FL.node[6].mobility maxY 1500
+par QNet_FL.node[6].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[6] typename "\"NodeFL\""
+par QNet_FL.node[6] nodeId 6
+par QNet_FL.node[6] alpha 0.7
+par QNet_FL.node[6] updateInterval 1s
+attr unit s
+par QNet_FL.node[6] costMetric 1
+par QNet_FL.node[6] trafficRate 0.7872011399819205s
+attr unit s
+par QNet_FL.node[6] flInterval 10s
+attr unit s
+par QNet_FL.node[7].app typename "\"App\""
+par QNet_FL.node[7].app nodeId 7
+par QNet_FL.node[7].app trafficRate 1.8789640542027393s
+attr unit s
+par QNet_FL.node[7].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[7].routing nodeId 7
+par QNet_FL.node[7].routing alpha 0.7
+par QNet_FL.node[7].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[7].routing discountFactor 0.9
+par QNet_FL.node[7].routing replayCapacity 100
+par QNet_FL.node[7].routing batchSize 16
+par QNet_FL.node[7].routing hiddenDim 16
+par QNet_FL.node[7].routing epsilon 0.3
+par QNet_FL.node[7].routing flInterval 10s
+attr unit s
+par QNet_FL.node[7].mobility typename "\"Mobility\""
+par QNet_FL.node[7].mobility maxX 1500
+par QNet_FL.node[7].mobility maxY 1500
+par QNet_FL.node[7].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[7] typename "\"NodeFL\""
+par QNet_FL.node[7] nodeId 7
+par QNet_FL.node[7] alpha 0.7
+par QNet_FL.node[7] updateInterval 1s
+attr unit s
+par QNet_FL.node[7] costMetric 1
+par QNet_FL.node[7] trafficRate 1.8789640542027393s
+attr unit s
+par QNet_FL.node[7] flInterval 10s
+attr unit s
+par QNet_FL.node[8].app typename "\"App\""
+par QNet_FL.node[8].app nodeId 8
+par QNet_FL.node[8].app trafficRate 0.5510484866703115s
+attr unit s
+par QNet_FL.node[8].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[8].routing nodeId 8
+par QNet_FL.node[8].routing alpha 0.7
+par QNet_FL.node[8].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[8].routing discountFactor 0.9
+par QNet_FL.node[8].routing replayCapacity 100
+par QNet_FL.node[8].routing batchSize 16
+par QNet_FL.node[8].routing hiddenDim 16
+par QNet_FL.node[8].routing epsilon 0.3
+par QNet_FL.node[8].routing flInterval 10s
+attr unit s
+par QNet_FL.node[8].mobility typename "\"Mobility\""
+par QNet_FL.node[8].mobility maxX 1500
+par QNet_FL.node[8].mobility maxY 1500
+par QNet_FL.node[8].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[8] typename "\"NodeFL\""
+par QNet_FL.node[8] nodeId 8
+par QNet_FL.node[8] alpha 0.7
+par QNet_FL.node[8] updateInterval 1s
+attr unit s
+par QNet_FL.node[8] costMetric 1
+par QNet_FL.node[8] trafficRate 0.5510484866703115s
+attr unit s
+par QNet_FL.node[8] flInterval 10s
+attr unit s
+par QNet_FL.node[9].app typename "\"App\""
+par QNet_FL.node[9].app nodeId 9
+par QNet_FL.node[9].app trafficRate 0.9770064263933582s
+attr unit s
+par QNet_FL.node[9].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[9].routing nodeId 9
+par QNet_FL.node[9].routing alpha 0.7
+par QNet_FL.node[9].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[9].routing discountFactor 0.9
+par QNet_FL.node[9].routing replayCapacity 100
+par QNet_FL.node[9].routing batchSize 16
+par QNet_FL.node[9].routing hiddenDim 16
+par QNet_FL.node[9].routing epsilon 0.3
+par QNet_FL.node[9].routing flInterval 10s
+attr unit s
+par QNet_FL.node[9].mobility typename "\"Mobility\""
+par QNet_FL.node[9].mobility maxX 1500
+par QNet_FL.node[9].mobility maxY 1500
+par QNet_FL.node[9].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[9] typename "\"NodeFL\""
+par QNet_FL.node[9] nodeId 9
+par QNet_FL.node[9] alpha 0.7
+par QNet_FL.node[9] updateInterval 1s
+attr unit s
+par QNet_FL.node[9] costMetric 1
+par QNet_FL.node[9] trafficRate 0.9770064263933582s
+attr unit s
+par QNet_FL.node[9] flInterval 10s
+attr unit s
+par QNet_FL.node[10].app typename "\"App\""
+par QNet_FL.node[10].app nodeId 10
+par QNet_FL.node[10].app trafficRate 1.0381593006638665s
+attr unit s
+par QNet_FL.node[10].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[10].routing nodeId 10
+par QNet_FL.node[10].routing alpha 0.7
+par QNet_FL.node[10].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[10].routing discountFactor 0.9
+par QNet_FL.node[10].routing replayCapacity 100
+par QNet_FL.node[10].routing batchSize 16
+par QNet_FL.node[10].routing hiddenDim 16
+par QNet_FL.node[10].routing epsilon 0.3
+par QNet_FL.node[10].routing flInterval 10s
+attr unit s
+par QNet_FL.node[10].mobility typename "\"Mobility\""
+par QNet_FL.node[10].mobility maxX 1500
+par QNet_FL.node[10].mobility maxY 1500
+par QNet_FL.node[10].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[10] typename "\"NodeFL\""
+par QNet_FL.node[10] nodeId 10
+par QNet_FL.node[10] alpha 0.7
+par QNet_FL.node[10] updateInterval 1s
+attr unit s
+par QNet_FL.node[10] costMetric 1
+par QNet_FL.node[10] trafficRate 1.0381593006638665s
+attr unit s
+par QNet_FL.node[10] flInterval 10s
+attr unit s
+par QNet_FL.node[11].app typename "\"App\""
+par QNet_FL.node[11].app nodeId 11
+par QNet_FL.node[11].app trafficRate 0.4851281637216459s
+attr unit s
+par QNet_FL.node[11].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[11].routing nodeId 11
+par QNet_FL.node[11].routing alpha 0.7
+par QNet_FL.node[11].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[11].routing discountFactor 0.9
+par QNet_FL.node[11].routing replayCapacity 100
+par QNet_FL.node[11].routing batchSize 16
+par QNet_FL.node[11].routing hiddenDim 16
+par QNet_FL.node[11].routing epsilon 0.3
+par QNet_FL.node[11].routing flInterval 10s
+attr unit s
+par QNet_FL.node[11].mobility typename "\"Mobility\""
+par QNet_FL.node[11].mobility maxX 1500
+par QNet_FL.node[11].mobility maxY 1500
+par QNet_FL.node[11].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[11] typename "\"NodeFL\""
+par QNet_FL.node[11] nodeId 11
+par QNet_FL.node[11] alpha 0.7
+par QNet_FL.node[11] updateInterval 1s
+attr unit s
+par QNet_FL.node[11] costMetric 1
+par QNet_FL.node[11] trafficRate 0.4851281637216459s
+attr unit s
+par QNet_FL.node[11] flInterval 10s
+attr unit s
+par QNet_FL.node[12].app typename "\"App\""
+par QNet_FL.node[12].app nodeId 12
+par QNet_FL.node[12].app trafficRate 0.5755191968829825s
+attr unit s
+par QNet_FL.node[12].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[12].routing nodeId 12
+par QNet_FL.node[12].routing alpha 0.7
+par QNet_FL.node[12].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[12].routing discountFactor 0.9
+par QNet_FL.node[12].routing replayCapacity 100
+par QNet_FL.node[12].routing batchSize 16
+par QNet_FL.node[12].routing hiddenDim 16
+par QNet_FL.node[12].routing epsilon 0.3
+par QNet_FL.node[12].routing flInterval 10s
+attr unit s
+par QNet_FL.node[12].mobility typename "\"Mobility\""
+par QNet_FL.node[12].mobility maxX 1500
+par QNet_FL.node[12].mobility maxY 1500
+par QNet_FL.node[12].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[12] typename "\"NodeFL\""
+par QNet_FL.node[12] nodeId 12
+par QNet_FL.node[12] alpha 0.7
+par QNet_FL.node[12] updateInterval 1s
+attr unit s
+par QNet_FL.node[12] costMetric 1
+par QNet_FL.node[12] trafficRate 0.5755191968829825s
+attr unit s
+par QNet_FL.node[12] flInterval 10s
+attr unit s
+par QNet_FL.node[13].app typename "\"App\""
+par QNet_FL.node[13].app nodeId 13
+par QNet_FL.node[13].app trafficRate 0.35315913913752234s
+attr unit s
+par QNet_FL.node[13].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[13].routing nodeId 13
+par QNet_FL.node[13].routing alpha 0.7
+par QNet_FL.node[13].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[13].routing discountFactor 0.9
+par QNet_FL.node[13].routing replayCapacity 100
+par QNet_FL.node[13].routing batchSize 16
+par QNet_FL.node[13].routing hiddenDim 16
+par QNet_FL.node[13].routing epsilon 0.3
+par QNet_FL.node[13].routing flInterval 10s
+attr unit s
+par QNet_FL.node[13].mobility typename "\"Mobility\""
+par QNet_FL.node[13].mobility maxX 1500
+par QNet_FL.node[13].mobility maxY 1500
+par QNet_FL.node[13].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[13] typename "\"NodeFL\""
+par QNet_FL.node[13] nodeId 13
+par QNet_FL.node[13] alpha 0.7
+par QNet_FL.node[13] updateInterval 1s
+attr unit s
+par QNet_FL.node[13] costMetric 1
+par QNet_FL.node[13] trafficRate 0.35315913913752234s
+attr unit s
+par QNet_FL.node[13] flInterval 10s
+attr unit s
+par QNet_FL.node[14].app typename "\"App\""
+par QNet_FL.node[14].app nodeId 14
+par QNet_FL.node[14].app trafficRate 2.223524422036319s
+attr unit s
+par QNet_FL.node[14].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[14].routing nodeId 14
+par QNet_FL.node[14].routing alpha 0.7
+par QNet_FL.node[14].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[14].routing discountFactor 0.9
+par QNet_FL.node[14].routing replayCapacity 100
+par QNet_FL.node[14].routing batchSize 16
+par QNet_FL.node[14].routing hiddenDim 16
+par QNet_FL.node[14].routing epsilon 0.3
+par QNet_FL.node[14].routing flInterval 10s
+attr unit s
+par QNet_FL.node[14].mobility typename "\"Mobility\""
+par QNet_FL.node[14].mobility maxX 1500
+par QNet_FL.node[14].mobility maxY 1500
+par QNet_FL.node[14].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[14] typename "\"NodeFL\""
+par QNet_FL.node[14] nodeId 14
+par QNet_FL.node[14] alpha 0.7
+par QNet_FL.node[14] updateInterval 1s
+attr unit s
+par QNet_FL.node[14] costMetric 1
+par QNet_FL.node[14] trafficRate 2.223524422036319s
+attr unit s
+par QNet_FL.node[14] flInterval 10s
+attr unit s
+par QNet_FL.node[15].app typename "\"App\""
+par QNet_FL.node[15].app nodeId 15
+par QNet_FL.node[15].app trafficRate 0.058384669093081695s
+attr unit s
+par QNet_FL.node[15].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[15].routing nodeId 15
+par QNet_FL.node[15].routing alpha 0.7
+par QNet_FL.node[15].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[15].routing discountFactor 0.9
+par QNet_FL.node[15].routing replayCapacity 100
+par QNet_FL.node[15].routing batchSize 16
+par QNet_FL.node[15].routing hiddenDim 16
+par QNet_FL.node[15].routing epsilon 0.3
+par QNet_FL.node[15].routing flInterval 10s
+attr unit s
+par QNet_FL.node[15].mobility typename "\"Mobility\""
+par QNet_FL.node[15].mobility maxX 1500
+par QNet_FL.node[15].mobility maxY 1500
+par QNet_FL.node[15].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[15] typename "\"NodeFL\""
+par QNet_FL.node[15] nodeId 15
+par QNet_FL.node[15] alpha 0.7
+par QNet_FL.node[15] updateInterval 1s
+attr unit s
+par QNet_FL.node[15] costMetric 1
+par QNet_FL.node[15] trafficRate 0.058384669093081695s
+attr unit s
+par QNet_FL.node[15] flInterval 10s
+attr unit s
+par QNet_FL.node[16].app typename "\"App\""
+par QNet_FL.node[16].app nodeId 16
+par QNet_FL.node[16].app trafficRate 3.314912279928281s
+attr unit s
+par QNet_FL.node[16].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[16].routing nodeId 16
+par QNet_FL.node[16].routing alpha 0.7
+par QNet_FL.node[16].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[16].routing discountFactor 0.9
+par QNet_FL.node[16].routing replayCapacity 100
+par QNet_FL.node[16].routing batchSize 16
+par QNet_FL.node[16].routing hiddenDim 16
+par QNet_FL.node[16].routing epsilon 0.3
+par QNet_FL.node[16].routing flInterval 10s
+attr unit s
+par QNet_FL.node[16].mobility typename "\"Mobility\""
+par QNet_FL.node[16].mobility maxX 1500
+par QNet_FL.node[16].mobility maxY 1500
+par QNet_FL.node[16].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[16] typename "\"NodeFL\""
+par QNet_FL.node[16] nodeId 16
+par QNet_FL.node[16] alpha 0.7
+par QNet_FL.node[16] updateInterval 1s
+attr unit s
+par QNet_FL.node[16] costMetric 1
+par QNet_FL.node[16] trafficRate 3.314912279928281s
+attr unit s
+par QNet_FL.node[16] flInterval 10s
+attr unit s
+par QNet_FL.node[17].app typename "\"App\""
+par QNet_FL.node[17].app nodeId 17
+par QNet_FL.node[17].app trafficRate 0.3183561408417968s
+attr unit s
+par QNet_FL.node[17].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[17].routing nodeId 17
+par QNet_FL.node[17].routing alpha 0.7
+par QNet_FL.node[17].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[17].routing discountFactor 0.9
+par QNet_FL.node[17].routing replayCapacity 100
+par QNet_FL.node[17].routing batchSize 16
+par QNet_FL.node[17].routing hiddenDim 16
+par QNet_FL.node[17].routing epsilon 0.3
+par QNet_FL.node[17].routing flInterval 10s
+attr unit s
+par QNet_FL.node[17].mobility typename "\"Mobility\""
+par QNet_FL.node[17].mobility maxX 1500
+par QNet_FL.node[17].mobility maxY 1500
+par QNet_FL.node[17].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[17] typename "\"NodeFL\""
+par QNet_FL.node[17] nodeId 17
+par QNet_FL.node[17] alpha 0.7
+par QNet_FL.node[17] updateInterval 1s
+attr unit s
+par QNet_FL.node[17] costMetric 1
+par QNet_FL.node[17] trafficRate 0.3183561408417968s
+attr unit s
+par QNet_FL.node[17] flInterval 10s
+attr unit s
+par QNet_FL.node[18].app typename "\"App\""
+par QNet_FL.node[18].app nodeId 18
+par QNet_FL.node[18].app trafficRate 0.48360210494844585s
+attr unit s
+par QNet_FL.node[18].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[18].routing nodeId 18
+par QNet_FL.node[18].routing alpha 0.7
+par QNet_FL.node[18].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[18].routing discountFactor 0.9
+par QNet_FL.node[18].routing replayCapacity 100
+par QNet_FL.node[18].routing batchSize 16
+par QNet_FL.node[18].routing hiddenDim 16
+par QNet_FL.node[18].routing epsilon 0.3
+par QNet_FL.node[18].routing flInterval 10s
+attr unit s
+par QNet_FL.node[18].mobility typename "\"Mobility\""
+par QNet_FL.node[18].mobility maxX 1500
+par QNet_FL.node[18].mobility maxY 1500
+par QNet_FL.node[18].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[18] typename "\"NodeFL\""
+par QNet_FL.node[18] nodeId 18
+par QNet_FL.node[18] alpha 0.7
+par QNet_FL.node[18] updateInterval 1s
+attr unit s
+par QNet_FL.node[18] costMetric 1
+par QNet_FL.node[18] trafficRate 0.48360210494844585s
+attr unit s
+par QNet_FL.node[18] flInterval 10s
+attr unit s
+par QNet_FL.node[19].app typename "\"App\""
+par QNet_FL.node[19].app nodeId 19
+par QNet_FL.node[19].app trafficRate 0.6494463482508642s
+attr unit s
+par QNet_FL.node[19].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[19].routing nodeId 19
+par QNet_FL.node[19].routing alpha 0.7
+par QNet_FL.node[19].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[19].routing discountFactor 0.9
+par QNet_FL.node[19].routing replayCapacity 100
+par QNet_FL.node[19].routing batchSize 16
+par QNet_FL.node[19].routing hiddenDim 16
+par QNet_FL.node[19].routing epsilon 0.3
+par QNet_FL.node[19].routing flInterval 10s
+attr unit s
+par QNet_FL.node[19].mobility typename "\"Mobility\""
+par QNet_FL.node[19].mobility maxX 1500
+par QNet_FL.node[19].mobility maxY 1500
+par QNet_FL.node[19].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[19] typename "\"NodeFL\""
+par QNet_FL.node[19] nodeId 19
+par QNet_FL.node[19] alpha 0.7
+par QNet_FL.node[19] updateInterval 1s
+attr unit s
+par QNet_FL.node[19] costMetric 1
+par QNet_FL.node[19] trafficRate 0.6494463482508642s
+attr unit s
+par QNet_FL.node[19] flInterval 10s
+attr unit s
+par QNet_FL.node[20].app typename "\"App\""
+par QNet_FL.node[20].app nodeId 20
+par QNet_FL.node[20].app trafficRate 1.5688961176230134s
+attr unit s
+par QNet_FL.node[20].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[20].routing nodeId 20
+par QNet_FL.node[20].routing alpha 0.7
+par QNet_FL.node[20].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[20].routing discountFactor 0.9
+par QNet_FL.node[20].routing replayCapacity 100
+par QNet_FL.node[20].routing batchSize 16
+par QNet_FL.node[20].routing hiddenDim 16
+par QNet_FL.node[20].routing epsilon 0.3
+par QNet_FL.node[20].routing flInterval 10s
+attr unit s
+par QNet_FL.node[20].mobility typename "\"Mobility\""
+par QNet_FL.node[20].mobility maxX 1500
+par QNet_FL.node[20].mobility maxY 1500
+par QNet_FL.node[20].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[20] typename "\"NodeFL\""
+par QNet_FL.node[20] nodeId 20
+par QNet_FL.node[20] alpha 0.7
+par QNet_FL.node[20] updateInterval 1s
+attr unit s
+par QNet_FL.node[20] costMetric 1
+par QNet_FL.node[20] trafficRate 1.5688961176230134s
+attr unit s
+par QNet_FL.node[20] flInterval 10s
+attr unit s
+par QNet_FL.node[21].app typename "\"App\""
+par QNet_FL.node[21].app nodeId 21
+par QNet_FL.node[21].app trafficRate 1.6722112003249545s
+attr unit s
+par QNet_FL.node[21].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[21].routing nodeId 21
+par QNet_FL.node[21].routing alpha 0.7
+par QNet_FL.node[21].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[21].routing discountFactor 0.9
+par QNet_FL.node[21].routing replayCapacity 100
+par QNet_FL.node[21].routing batchSize 16
+par QNet_FL.node[21].routing hiddenDim 16
+par QNet_FL.node[21].routing epsilon 0.3
+par QNet_FL.node[21].routing flInterval 10s
+attr unit s
+par QNet_FL.node[21].mobility typename "\"Mobility\""
+par QNet_FL.node[21].mobility maxX 1500
+par QNet_FL.node[21].mobility maxY 1500
+par QNet_FL.node[21].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[21] typename "\"NodeFL\""
+par QNet_FL.node[21] nodeId 21
+par QNet_FL.node[21] alpha 0.7
+par QNet_FL.node[21] updateInterval 1s
+attr unit s
+par QNet_FL.node[21] costMetric 1
+par QNet_FL.node[21] trafficRate 1.6722112003249545s
+attr unit s
+par QNet_FL.node[21] flInterval 10s
+attr unit s
+par QNet_FL.node[22].app typename "\"App\""
+par QNet_FL.node[22].app nodeId 22
+par QNet_FL.node[22].app trafficRate 0.7526741133128081s
+attr unit s
+par QNet_FL.node[22].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[22].routing nodeId 22
+par QNet_FL.node[22].routing alpha 0.7
+par QNet_FL.node[22].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[22].routing discountFactor 0.9
+par QNet_FL.node[22].routing replayCapacity 100
+par QNet_FL.node[22].routing batchSize 16
+par QNet_FL.node[22].routing hiddenDim 16
+par QNet_FL.node[22].routing epsilon 0.3
+par QNet_FL.node[22].routing flInterval 10s
+attr unit s
+par QNet_FL.node[22].mobility typename "\"Mobility\""
+par QNet_FL.node[22].mobility maxX 1500
+par QNet_FL.node[22].mobility maxY 1500
+par QNet_FL.node[22].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[22] typename "\"NodeFL\""
+par QNet_FL.node[22] nodeId 22
+par QNet_FL.node[22] alpha 0.7
+par QNet_FL.node[22] updateInterval 1s
+attr unit s
+par QNet_FL.node[22] costMetric 1
+par QNet_FL.node[22] trafficRate 0.7526741133128081s
+attr unit s
+par QNet_FL.node[22] flInterval 10s
+attr unit s
+par QNet_FL.node[23].app typename "\"App\""
+par QNet_FL.node[23].app nodeId 23
+par QNet_FL.node[23].app trafficRate 0.6538825672211077s
+attr unit s
+par QNet_FL.node[23].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[23].routing nodeId 23
+par QNet_FL.node[23].routing alpha 0.7
+par QNet_FL.node[23].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[23].routing discountFactor 0.9
+par QNet_FL.node[23].routing replayCapacity 100
+par QNet_FL.node[23].routing batchSize 16
+par QNet_FL.node[23].routing hiddenDim 16
+par QNet_FL.node[23].routing epsilon 0.3
+par QNet_FL.node[23].routing flInterval 10s
+attr unit s
+par QNet_FL.node[23].mobility typename "\"Mobility\""
+par QNet_FL.node[23].mobility maxX 1500
+par QNet_FL.node[23].mobility maxY 1500
+par QNet_FL.node[23].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[23] typename "\"NodeFL\""
+par QNet_FL.node[23] nodeId 23
+par QNet_FL.node[23] alpha 0.7
+par QNet_FL.node[23] updateInterval 1s
+attr unit s
+par QNet_FL.node[23] costMetric 1
+par QNet_FL.node[23] trafficRate 0.6538825672211077s
+attr unit s
+par QNet_FL.node[23] flInterval 10s
+attr unit s
+par QNet_FL.node[24].app typename "\"App\""
+par QNet_FL.node[24].app nodeId 24
+par QNet_FL.node[24].app trafficRate 0.8394328529002472s
+attr unit s
+par QNet_FL.node[24].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[24].routing nodeId 24
+par QNet_FL.node[24].routing alpha 0.7
+par QNet_FL.node[24].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[24].routing discountFactor 0.9
+par QNet_FL.node[24].routing replayCapacity 100
+par QNet_FL.node[24].routing batchSize 16
+par QNet_FL.node[24].routing hiddenDim 16
+par QNet_FL.node[24].routing epsilon 0.3
+par QNet_FL.node[24].routing flInterval 10s
+attr unit s
+par QNet_FL.node[24].mobility typename "\"Mobility\""
+par QNet_FL.node[24].mobility maxX 1500
+par QNet_FL.node[24].mobility maxY 1500
+par QNet_FL.node[24].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[24] typename "\"NodeFL\""
+par QNet_FL.node[24] nodeId 24
+par QNet_FL.node[24] alpha 0.7
+par QNet_FL.node[24] updateInterval 1s
+attr unit s
+par QNet_FL.node[24] costMetric 1
+par QNet_FL.node[24] trafficRate 0.8394328529002472s
+attr unit s
+par QNet_FL.node[24] flInterval 10s
+attr unit s
+par QNet_FL.node[25].app typename "\"App\""
+par QNet_FL.node[25].app nodeId 25
+par QNet_FL.node[25].app trafficRate 0.498872009015896s
+attr unit s
+par QNet_FL.node[25].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[25].routing nodeId 25
+par QNet_FL.node[25].routing alpha 0.7
+par QNet_FL.node[25].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[25].routing discountFactor 0.9
+par QNet_FL.node[25].routing replayCapacity 100
+par QNet_FL.node[25].routing batchSize 16
+par QNet_FL.node[25].routing hiddenDim 16
+par QNet_FL.node[25].routing epsilon 0.3
+par QNet_FL.node[25].routing flInterval 10s
+attr unit s
+par QNet_FL.node[25].mobility typename "\"Mobility\""
+par QNet_FL.node[25].mobility maxX 1500
+par QNet_FL.node[25].mobility maxY 1500
+par QNet_FL.node[25].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[25] typename "\"NodeFL\""
+par QNet_FL.node[25] nodeId 25
+par QNet_FL.node[25] alpha 0.7
+par QNet_FL.node[25] updateInterval 1s
+attr unit s
+par QNet_FL.node[25] costMetric 1
+par QNet_FL.node[25] trafficRate 0.498872009015896s
+attr unit s
+par QNet_FL.node[25] flInterval 10s
+attr unit s
+par QNet_FL.node[26].app typename "\"App\""
+par QNet_FL.node[26].app nodeId 26
+par QNet_FL.node[26].app trafficRate 2.598254085848963s
+attr unit s
+par QNet_FL.node[26].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[26].routing nodeId 26
+par QNet_FL.node[26].routing alpha 0.7
+par QNet_FL.node[26].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[26].routing discountFactor 0.9
+par QNet_FL.node[26].routing replayCapacity 100
+par QNet_FL.node[26].routing batchSize 16
+par QNet_FL.node[26].routing hiddenDim 16
+par QNet_FL.node[26].routing epsilon 0.3
+par QNet_FL.node[26].routing flInterval 10s
+attr unit s
+par QNet_FL.node[26].mobility typename "\"Mobility\""
+par QNet_FL.node[26].mobility maxX 1500
+par QNet_FL.node[26].mobility maxY 1500
+par QNet_FL.node[26].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[26] typename "\"NodeFL\""
+par QNet_FL.node[26] nodeId 26
+par QNet_FL.node[26] alpha 0.7
+par QNet_FL.node[26] updateInterval 1s
+attr unit s
+par QNet_FL.node[26] costMetric 1
+par QNet_FL.node[26] trafficRate 2.598254085848963s
+attr unit s
+par QNet_FL.node[26] flInterval 10s
+attr unit s
+par QNet_FL.node[27].app typename "\"App\""
+par QNet_FL.node[27].app nodeId 27
+par QNet_FL.node[27].app trafficRate 1.808369264274939s
+attr unit s
+par QNet_FL.node[27].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[27].routing nodeId 27
+par QNet_FL.node[27].routing alpha 0.7
+par QNet_FL.node[27].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[27].routing discountFactor 0.9
+par QNet_FL.node[27].routing replayCapacity 100
+par QNet_FL.node[27].routing batchSize 16
+par QNet_FL.node[27].routing hiddenDim 16
+par QNet_FL.node[27].routing epsilon 0.3
+par QNet_FL.node[27].routing flInterval 10s
+attr unit s
+par QNet_FL.node[27].mobility typename "\"Mobility\""
+par QNet_FL.node[27].mobility maxX 1500
+par QNet_FL.node[27].mobility maxY 1500
+par QNet_FL.node[27].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[27] typename "\"NodeFL\""
+par QNet_FL.node[27] nodeId 27
+par QNet_FL.node[27] alpha 0.7
+par QNet_FL.node[27] updateInterval 1s
+attr unit s
+par QNet_FL.node[27] costMetric 1
+par QNet_FL.node[27] trafficRate 1.808369264274939s
+attr unit s
+par QNet_FL.node[27] flInterval 10s
+attr unit s
+par QNet_FL.node[28].app typename "\"App\""
+par QNet_FL.node[28].app nodeId 28
+par QNet_FL.node[28].app trafficRate 0.07368535546507715s
+attr unit s
+par QNet_FL.node[28].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[28].routing nodeId 28
+par QNet_FL.node[28].routing alpha 0.7
+par QNet_FL.node[28].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[28].routing discountFactor 0.9
+par QNet_FL.node[28].routing replayCapacity 100
+par QNet_FL.node[28].routing batchSize 16
+par QNet_FL.node[28].routing hiddenDim 16
+par QNet_FL.node[28].routing epsilon 0.3
+par QNet_FL.node[28].routing flInterval 10s
+attr unit s
+par QNet_FL.node[28].mobility typename "\"Mobility\""
+par QNet_FL.node[28].mobility maxX 1500
+par QNet_FL.node[28].mobility maxY 1500
+par QNet_FL.node[28].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[28] typename "\"NodeFL\""
+par QNet_FL.node[28] nodeId 28
+par QNet_FL.node[28] alpha 0.7
+par QNet_FL.node[28] updateInterval 1s
+attr unit s
+par QNet_FL.node[28] costMetric 1
+par QNet_FL.node[28] trafficRate 0.07368535546507715s
+attr unit s
+par QNet_FL.node[28] flInterval 10s
+attr unit s
+par QNet_FL.node[29].app typename "\"App\""
+par QNet_FL.node[29].app nodeId 29
+par QNet_FL.node[29].app trafficRate 0.41157799624261276s
+attr unit s
+par QNet_FL.node[29].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[29].routing nodeId 29
+par QNet_FL.node[29].routing alpha 0.7
+par QNet_FL.node[29].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[29].routing discountFactor 0.9
+par QNet_FL.node[29].routing replayCapacity 100
+par QNet_FL.node[29].routing batchSize 16
+par QNet_FL.node[29].routing hiddenDim 16
+par QNet_FL.node[29].routing epsilon 0.3
+par QNet_FL.node[29].routing flInterval 10s
+attr unit s
+par QNet_FL.node[29].mobility typename "\"Mobility\""
+par QNet_FL.node[29].mobility maxX 1500
+par QNet_FL.node[29].mobility maxY 1500
+par QNet_FL.node[29].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[29] typename "\"NodeFL\""
+par QNet_FL.node[29] nodeId 29
+par QNet_FL.node[29] alpha 0.7
+par QNet_FL.node[29] updateInterval 1s
+attr unit s
+par QNet_FL.node[29] costMetric 1
+par QNet_FL.node[29] trafficRate 0.41157799624261276s
+attr unit s
+par QNet_FL.node[29] flInterval 10s
+attr unit s
+par QNet_FL.node[30].app typename "\"App\""
+par QNet_FL.node[30].app nodeId 30
+par QNet_FL.node[30].app trafficRate 0.09116102612429272s
+attr unit s
+par QNet_FL.node[30].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[30].routing nodeId 30
+par QNet_FL.node[30].routing alpha 0.7
+par QNet_FL.node[30].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[30].routing discountFactor 0.9
+par QNet_FL.node[30].routing replayCapacity 100
+par QNet_FL.node[30].routing batchSize 16
+par QNet_FL.node[30].routing hiddenDim 16
+par QNet_FL.node[30].routing epsilon 0.3
+par QNet_FL.node[30].routing flInterval 10s
+attr unit s
+par QNet_FL.node[30].mobility typename "\"Mobility\""
+par QNet_FL.node[30].mobility maxX 1500
+par QNet_FL.node[30].mobility maxY 1500
+par QNet_FL.node[30].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[30] typename "\"NodeFL\""
+par QNet_FL.node[30] nodeId 30
+par QNet_FL.node[30] alpha 0.7
+par QNet_FL.node[30] updateInterval 1s
+attr unit s
+par QNet_FL.node[30] costMetric 1
+par QNet_FL.node[30] trafficRate 0.09116102612429272s
+attr unit s
+par QNet_FL.node[30] flInterval 10s
+attr unit s
+par QNet_FL.node[31].app typename "\"App\""
+par QNet_FL.node[31].app nodeId 31
+par QNet_FL.node[31].app trafficRate 1.0446125083080922s
+attr unit s
+par QNet_FL.node[31].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[31].routing nodeId 31
+par QNet_FL.node[31].routing alpha 0.7
+par QNet_FL.node[31].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[31].routing discountFactor 0.9
+par QNet_FL.node[31].routing replayCapacity 100
+par QNet_FL.node[31].routing batchSize 16
+par QNet_FL.node[31].routing hiddenDim 16
+par QNet_FL.node[31].routing epsilon 0.3
+par QNet_FL.node[31].routing flInterval 10s
+attr unit s
+par QNet_FL.node[31].mobility typename "\"Mobility\""
+par QNet_FL.node[31].mobility maxX 1500
+par QNet_FL.node[31].mobility maxY 1500
+par QNet_FL.node[31].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[31] typename "\"NodeFL\""
+par QNet_FL.node[31] nodeId 31
+par QNet_FL.node[31] alpha 0.7
+par QNet_FL.node[31] updateInterval 1s
+attr unit s
+par QNet_FL.node[31] costMetric 1
+par QNet_FL.node[31] trafficRate 1.0446125083080922s
+attr unit s
+par QNet_FL.node[31] flInterval 10s
+attr unit s
+par QNet_FL.node[32].app typename "\"App\""
+par QNet_FL.node[32].app nodeId 32
+par QNet_FL.node[32].app trafficRate 0.02042558839906528s
+attr unit s
+par QNet_FL.node[32].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[32].routing nodeId 32
+par QNet_FL.node[32].routing alpha 0.7
+par QNet_FL.node[32].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[32].routing discountFactor 0.9
+par QNet_FL.node[32].routing replayCapacity 100
+par QNet_FL.node[32].routing batchSize 16
+par QNet_FL.node[32].routing hiddenDim 16
+par QNet_FL.node[32].routing epsilon 0.3
+par QNet_FL.node[32].routing flInterval 10s
+attr unit s
+par QNet_FL.node[32].mobility typename "\"Mobility\""
+par QNet_FL.node[32].mobility maxX 1500
+par QNet_FL.node[32].mobility maxY 1500
+par QNet_FL.node[32].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[32] typename "\"NodeFL\""
+par QNet_FL.node[32] nodeId 32
+par QNet_FL.node[32] alpha 0.7
+par QNet_FL.node[32] updateInterval 1s
+attr unit s
+par QNet_FL.node[32] costMetric 1
+par QNet_FL.node[32] trafficRate 0.02042558839906528s
+attr unit s
+par QNet_FL.node[32] flInterval 10s
+attr unit s
+par QNet_FL.node[33].app typename "\"App\""
+par QNet_FL.node[33].app nodeId 33
+par QNet_FL.node[33].app trafficRate 0.45924813725521446s
+attr unit s
+par QNet_FL.node[33].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[33].routing nodeId 33
+par QNet_FL.node[33].routing alpha 0.7
+par QNet_FL.node[33].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[33].routing discountFactor 0.9
+par QNet_FL.node[33].routing replayCapacity 100
+par QNet_FL.node[33].routing batchSize 16
+par QNet_FL.node[33].routing hiddenDim 16
+par QNet_FL.node[33].routing epsilon 0.3
+par QNet_FL.node[33].routing flInterval 10s
+attr unit s
+par QNet_FL.node[33].mobility typename "\"Mobility\""
+par QNet_FL.node[33].mobility maxX 1500
+par QNet_FL.node[33].mobility maxY 1500
+par QNet_FL.node[33].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[33] typename "\"NodeFL\""
+par QNet_FL.node[33] nodeId 33
+par QNet_FL.node[33] alpha 0.7
+par QNet_FL.node[33] updateInterval 1s
+attr unit s
+par QNet_FL.node[33] costMetric 1
+par QNet_FL.node[33] trafficRate 0.45924813725521446s
+attr unit s
+par QNet_FL.node[33] flInterval 10s
+attr unit s
+par QNet_FL.node[34].app typename "\"App\""
+par QNet_FL.node[34].app nodeId 34
+par QNet_FL.node[34].app trafficRate 1.7874876634386612s
+attr unit s
+par QNet_FL.node[34].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[34].routing nodeId 34
+par QNet_FL.node[34].routing alpha 0.7
+par QNet_FL.node[34].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[34].routing discountFactor 0.9
+par QNet_FL.node[34].routing replayCapacity 100
+par QNet_FL.node[34].routing batchSize 16
+par QNet_FL.node[34].routing hiddenDim 16
+par QNet_FL.node[34].routing epsilon 0.3
+par QNet_FL.node[34].routing flInterval 10s
+attr unit s
+par QNet_FL.node[34].mobility typename "\"Mobility\""
+par QNet_FL.node[34].mobility maxX 1500
+par QNet_FL.node[34].mobility maxY 1500
+par QNet_FL.node[34].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[34] typename "\"NodeFL\""
+par QNet_FL.node[34] nodeId 34
+par QNet_FL.node[34] alpha 0.7
+par QNet_FL.node[34] updateInterval 1s
+attr unit s
+par QNet_FL.node[34] costMetric 1
+par QNet_FL.node[34] trafficRate 1.7874876634386612s
+attr unit s
+par QNet_FL.node[34] flInterval 10s
+attr unit s
+par QNet_FL.node[35].app typename "\"App\""
+par QNet_FL.node[35].app nodeId 35
+par QNet_FL.node[35].app trafficRate 3.150169928675922s
+attr unit s
+par QNet_FL.node[35].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[35].routing nodeId 35
+par QNet_FL.node[35].routing alpha 0.7
+par QNet_FL.node[35].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[35].routing discountFactor 0.9
+par QNet_FL.node[35].routing replayCapacity 100
+par QNet_FL.node[35].routing batchSize 16
+par QNet_FL.node[35].routing hiddenDim 16
+par QNet_FL.node[35].routing epsilon 0.3
+par QNet_FL.node[35].routing flInterval 10s
+attr unit s
+par QNet_FL.node[35].mobility typename "\"Mobility\""
+par QNet_FL.node[35].mobility maxX 1500
+par QNet_FL.node[35].mobility maxY 1500
+par QNet_FL.node[35].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[35] typename "\"NodeFL\""
+par QNet_FL.node[35] nodeId 35
+par QNet_FL.node[35] alpha 0.7
+par QNet_FL.node[35] updateInterval 1s
+attr unit s
+par QNet_FL.node[35] costMetric 1
+par QNet_FL.node[35] trafficRate 3.150169928675922s
+attr unit s
+par QNet_FL.node[35] flInterval 10s
+attr unit s
+par QNet_FL.node[36].app typename "\"App\""
+par QNet_FL.node[36].app nodeId 36
+par QNet_FL.node[36].app trafficRate 1.5057842586373829s
+attr unit s
+par QNet_FL.node[36].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[36].routing nodeId 36
+par QNet_FL.node[36].routing alpha 0.7
+par QNet_FL.node[36].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[36].routing discountFactor 0.9
+par QNet_FL.node[36].routing replayCapacity 100
+par QNet_FL.node[36].routing batchSize 16
+par QNet_FL.node[36].routing hiddenDim 16
+par QNet_FL.node[36].routing epsilon 0.3
+par QNet_FL.node[36].routing flInterval 10s
+attr unit s
+par QNet_FL.node[36].mobility typename "\"Mobility\""
+par QNet_FL.node[36].mobility maxX 1500
+par QNet_FL.node[36].mobility maxY 1500
+par QNet_FL.node[36].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[36] typename "\"NodeFL\""
+par QNet_FL.node[36] nodeId 36
+par QNet_FL.node[36] alpha 0.7
+par QNet_FL.node[36] updateInterval 1s
+attr unit s
+par QNet_FL.node[36] costMetric 1
+par QNet_FL.node[36] trafficRate 1.5057842586373829s
+attr unit s
+par QNet_FL.node[36] flInterval 10s
+attr unit s
+par QNet_FL.node[37].app typename "\"App\""
+par QNet_FL.node[37].app nodeId 37
+par QNet_FL.node[37].app trafficRate 0.15123085366498187s
+attr unit s
+par QNet_FL.node[37].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[37].routing nodeId 37
+par QNet_FL.node[37].routing alpha 0.7
+par QNet_FL.node[37].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[37].routing discountFactor 0.9
+par QNet_FL.node[37].routing replayCapacity 100
+par QNet_FL.node[37].routing batchSize 16
+par QNet_FL.node[37].routing hiddenDim 16
+par QNet_FL.node[37].routing epsilon 0.3
+par QNet_FL.node[37].routing flInterval 10s
+attr unit s
+par QNet_FL.node[37].mobility typename "\"Mobility\""
+par QNet_FL.node[37].mobility maxX 1500
+par QNet_FL.node[37].mobility maxY 1500
+par QNet_FL.node[37].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[37] typename "\"NodeFL\""
+par QNet_FL.node[37] nodeId 37
+par QNet_FL.node[37] alpha 0.7
+par QNet_FL.node[37] updateInterval 1s
+attr unit s
+par QNet_FL.node[37] costMetric 1
+par QNet_FL.node[37] trafficRate 0.15123085366498187s
+attr unit s
+par QNet_FL.node[37] flInterval 10s
+attr unit s
+par QNet_FL.node[38].app typename "\"App\""
+par QNet_FL.node[38].app nodeId 38
+par QNet_FL.node[38].app trafficRate 2.0403142579418976s
+attr unit s
+par QNet_FL.node[38].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[38].routing nodeId 38
+par QNet_FL.node[38].routing alpha 0.7
+par QNet_FL.node[38].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[38].routing discountFactor 0.9
+par QNet_FL.node[38].routing replayCapacity 100
+par QNet_FL.node[38].routing batchSize 16
+par QNet_FL.node[38].routing hiddenDim 16
+par QNet_FL.node[38].routing epsilon 0.3
+par QNet_FL.node[38].routing flInterval 10s
+attr unit s
+par QNet_FL.node[38].mobility typename "\"Mobility\""
+par QNet_FL.node[38].mobility maxX 1500
+par QNet_FL.node[38].mobility maxY 1500
+par QNet_FL.node[38].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[38] typename "\"NodeFL\""
+par QNet_FL.node[38] nodeId 38
+par QNet_FL.node[38] alpha 0.7
+par QNet_FL.node[38] updateInterval 1s
+attr unit s
+par QNet_FL.node[38] costMetric 1
+par QNet_FL.node[38] trafficRate 2.0403142579418976s
+attr unit s
+par QNet_FL.node[38] flInterval 10s
+attr unit s
+par QNet_FL.node[39].app typename "\"App\""
+par QNet_FL.node[39].app nodeId 39
+par QNet_FL.node[39].app trafficRate 2.040892215911723s
+attr unit s
+par QNet_FL.node[39].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[39].routing nodeId 39
+par QNet_FL.node[39].routing alpha 0.7
+par QNet_FL.node[39].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[39].routing discountFactor 0.9
+par QNet_FL.node[39].routing replayCapacity 100
+par QNet_FL.node[39].routing batchSize 16
+par QNet_FL.node[39].routing hiddenDim 16
+par QNet_FL.node[39].routing epsilon 0.3
+par QNet_FL.node[39].routing flInterval 10s
+attr unit s
+par QNet_FL.node[39].mobility typename "\"Mobility\""
+par QNet_FL.node[39].mobility maxX 1500
+par QNet_FL.node[39].mobility maxY 1500
+par QNet_FL.node[39].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[39] typename "\"NodeFL\""
+par QNet_FL.node[39] nodeId 39
+par QNet_FL.node[39] alpha 0.7
+par QNet_FL.node[39] updateInterval 1s
+attr unit s
+par QNet_FL.node[39] costMetric 1
+par QNet_FL.node[39] trafficRate 2.040892215911723s
+attr unit s
+par QNet_FL.node[39] flInterval 10s
+attr unit s
+par QNet_FL.node[40].app typename "\"App\""
+par QNet_FL.node[40].app nodeId 40
+par QNet_FL.node[40].app trafficRate 3.845221869141846s
+attr unit s
+par QNet_FL.node[40].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[40].routing nodeId 40
+par QNet_FL.node[40].routing alpha 0.7
+par QNet_FL.node[40].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[40].routing discountFactor 0.9
+par QNet_FL.node[40].routing replayCapacity 100
+par QNet_FL.node[40].routing batchSize 16
+par QNet_FL.node[40].routing hiddenDim 16
+par QNet_FL.node[40].routing epsilon 0.3
+par QNet_FL.node[40].routing flInterval 10s
+attr unit s
+par QNet_FL.node[40].mobility typename "\"Mobility\""
+par QNet_FL.node[40].mobility maxX 1500
+par QNet_FL.node[40].mobility maxY 1500
+par QNet_FL.node[40].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[40] typename "\"NodeFL\""
+par QNet_FL.node[40] nodeId 40
+par QNet_FL.node[40] alpha 0.7
+par QNet_FL.node[40] updateInterval 1s
+attr unit s
+par QNet_FL.node[40] costMetric 1
+par QNet_FL.node[40] trafficRate 3.845221869141846s
+attr unit s
+par QNet_FL.node[40] flInterval 10s
+attr unit s
+par QNet_FL.node[41].app typename "\"App\""
+par QNet_FL.node[41].app nodeId 41
+par QNet_FL.node[41].app trafficRate 0.6417091726781112s
+attr unit s
+par QNet_FL.node[41].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[41].routing nodeId 41
+par QNet_FL.node[41].routing alpha 0.7
+par QNet_FL.node[41].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[41].routing discountFactor 0.9
+par QNet_FL.node[41].routing replayCapacity 100
+par QNet_FL.node[41].routing batchSize 16
+par QNet_FL.node[41].routing hiddenDim 16
+par QNet_FL.node[41].routing epsilon 0.3
+par QNet_FL.node[41].routing flInterval 10s
+attr unit s
+par QNet_FL.node[41].mobility typename "\"Mobility\""
+par QNet_FL.node[41].mobility maxX 1500
+par QNet_FL.node[41].mobility maxY 1500
+par QNet_FL.node[41].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[41] typename "\"NodeFL\""
+par QNet_FL.node[41] nodeId 41
+par QNet_FL.node[41] alpha 0.7
+par QNet_FL.node[41] updateInterval 1s
+attr unit s
+par QNet_FL.node[41] costMetric 1
+par QNet_FL.node[41] trafficRate 0.6417091726781112s
+attr unit s
+par QNet_FL.node[41] flInterval 10s
+attr unit s
+par QNet_FL.node[42].app typename "\"App\""
+par QNet_FL.node[42].app nodeId 42
+par QNet_FL.node[42].app trafficRate 1.6052395570615188s
+attr unit s
+par QNet_FL.node[42].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[42].routing nodeId 42
+par QNet_FL.node[42].routing alpha 0.7
+par QNet_FL.node[42].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[42].routing discountFactor 0.9
+par QNet_FL.node[42].routing replayCapacity 100
+par QNet_FL.node[42].routing batchSize 16
+par QNet_FL.node[42].routing hiddenDim 16
+par QNet_FL.node[42].routing epsilon 0.3
+par QNet_FL.node[42].routing flInterval 10s
+attr unit s
+par QNet_FL.node[42].mobility typename "\"Mobility\""
+par QNet_FL.node[42].mobility maxX 1500
+par QNet_FL.node[42].mobility maxY 1500
+par QNet_FL.node[42].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[42] typename "\"NodeFL\""
+par QNet_FL.node[42] nodeId 42
+par QNet_FL.node[42] alpha 0.7
+par QNet_FL.node[42] updateInterval 1s
+attr unit s
+par QNet_FL.node[42] costMetric 1
+par QNet_FL.node[42] trafficRate 1.6052395570615188s
+attr unit s
+par QNet_FL.node[42] flInterval 10s
+attr unit s
+par QNet_FL.node[43].app typename "\"App\""
+par QNet_FL.node[43].app nodeId 43
+par QNet_FL.node[43].app trafficRate 1.6140020748925676s
+attr unit s
+par QNet_FL.node[43].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[43].routing nodeId 43
+par QNet_FL.node[43].routing alpha 0.7
+par QNet_FL.node[43].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[43].routing discountFactor 0.9
+par QNet_FL.node[43].routing replayCapacity 100
+par QNet_FL.node[43].routing batchSize 16
+par QNet_FL.node[43].routing hiddenDim 16
+par QNet_FL.node[43].routing epsilon 0.3
+par QNet_FL.node[43].routing flInterval 10s
+attr unit s
+par QNet_FL.node[43].mobility typename "\"Mobility\""
+par QNet_FL.node[43].mobility maxX 1500
+par QNet_FL.node[43].mobility maxY 1500
+par QNet_FL.node[43].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[43] typename "\"NodeFL\""
+par QNet_FL.node[43] nodeId 43
+par QNet_FL.node[43] alpha 0.7
+par QNet_FL.node[43] updateInterval 1s
+attr unit s
+par QNet_FL.node[43] costMetric 1
+par QNet_FL.node[43] trafficRate 1.6140020748925676s
+attr unit s
+par QNet_FL.node[43] flInterval 10s
+attr unit s
+par QNet_FL.node[44].app typename "\"App\""
+par QNet_FL.node[44].app nodeId 44
+par QNet_FL.node[44].app trafficRate 0.6189294596267141s
+attr unit s
+par QNet_FL.node[44].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[44].routing nodeId 44
+par QNet_FL.node[44].routing alpha 0.7
+par QNet_FL.node[44].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[44].routing discountFactor 0.9
+par QNet_FL.node[44].routing replayCapacity 100
+par QNet_FL.node[44].routing batchSize 16
+par QNet_FL.node[44].routing hiddenDim 16
+par QNet_FL.node[44].routing epsilon 0.3
+par QNet_FL.node[44].routing flInterval 10s
+attr unit s
+par QNet_FL.node[44].mobility typename "\"Mobility\""
+par QNet_FL.node[44].mobility maxX 1500
+par QNet_FL.node[44].mobility maxY 1500
+par QNet_FL.node[44].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[44] typename "\"NodeFL\""
+par QNet_FL.node[44] nodeId 44
+par QNet_FL.node[44] alpha 0.7
+par QNet_FL.node[44] updateInterval 1s
+attr unit s
+par QNet_FL.node[44] costMetric 1
+par QNet_FL.node[44] trafficRate 0.6189294596267141s
+attr unit s
+par QNet_FL.node[44] flInterval 10s
+attr unit s
+par QNet_FL.node[45].app typename "\"App\""
+par QNet_FL.node[45].app nodeId 45
+par QNet_FL.node[45].app trafficRate 0.7349644211898038s
+attr unit s
+par QNet_FL.node[45].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[45].routing nodeId 45
+par QNet_FL.node[45].routing alpha 0.7
+par QNet_FL.node[45].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[45].routing discountFactor 0.9
+par QNet_FL.node[45].routing replayCapacity 100
+par QNet_FL.node[45].routing batchSize 16
+par QNet_FL.node[45].routing hiddenDim 16
+par QNet_FL.node[45].routing epsilon 0.3
+par QNet_FL.node[45].routing flInterval 10s
+attr unit s
+par QNet_FL.node[45].mobility typename "\"Mobility\""
+par QNet_FL.node[45].mobility maxX 1500
+par QNet_FL.node[45].mobility maxY 1500
+par QNet_FL.node[45].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[45] typename "\"NodeFL\""
+par QNet_FL.node[45] nodeId 45
+par QNet_FL.node[45] alpha 0.7
+par QNet_FL.node[45] updateInterval 1s
+attr unit s
+par QNet_FL.node[45] costMetric 1
+par QNet_FL.node[45] trafficRate 0.7349644211898038s
+attr unit s
+par QNet_FL.node[45] flInterval 10s
+attr unit s
+par QNet_FL.node[46].app typename "\"App\""
+par QNet_FL.node[46].app nodeId 46
+par QNet_FL.node[46].app trafficRate 1.5165359739901803s
+attr unit s
+par QNet_FL.node[46].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[46].routing nodeId 46
+par QNet_FL.node[46].routing alpha 0.7
+par QNet_FL.node[46].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[46].routing discountFactor 0.9
+par QNet_FL.node[46].routing replayCapacity 100
+par QNet_FL.node[46].routing batchSize 16
+par QNet_FL.node[46].routing hiddenDim 16
+par QNet_FL.node[46].routing epsilon 0.3
+par QNet_FL.node[46].routing flInterval 10s
+attr unit s
+par QNet_FL.node[46].mobility typename "\"Mobility\""
+par QNet_FL.node[46].mobility maxX 1500
+par QNet_FL.node[46].mobility maxY 1500
+par QNet_FL.node[46].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[46] typename "\"NodeFL\""
+par QNet_FL.node[46] nodeId 46
+par QNet_FL.node[46] alpha 0.7
+par QNet_FL.node[46] updateInterval 1s
+attr unit s
+par QNet_FL.node[46] costMetric 1
+par QNet_FL.node[46] trafficRate 1.5165359739901803s
+attr unit s
+par QNet_FL.node[46] flInterval 10s
+attr unit s
+par QNet_FL.node[47].app typename "\"App\""
+par QNet_FL.node[47].app nodeId 47
+par QNet_FL.node[47].app trafficRate 1.1359389417102301s
+attr unit s
+par QNet_FL.node[47].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[47].routing nodeId 47
+par QNet_FL.node[47].routing alpha 0.7
+par QNet_FL.node[47].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[47].routing discountFactor 0.9
+par QNet_FL.node[47].routing replayCapacity 100
+par QNet_FL.node[47].routing batchSize 16
+par QNet_FL.node[47].routing hiddenDim 16
+par QNet_FL.node[47].routing epsilon 0.3
+par QNet_FL.node[47].routing flInterval 10s
+attr unit s
+par QNet_FL.node[47].mobility typename "\"Mobility\""
+par QNet_FL.node[47].mobility maxX 1500
+par QNet_FL.node[47].mobility maxY 1500
+par QNet_FL.node[47].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[47] typename "\"NodeFL\""
+par QNet_FL.node[47] nodeId 47
+par QNet_FL.node[47] alpha 0.7
+par QNet_FL.node[47] updateInterval 1s
+attr unit s
+par QNet_FL.node[47] costMetric 1
+par QNet_FL.node[47] trafficRate 1.1359389417102301s
+attr unit s
+par QNet_FL.node[47] flInterval 10s
+attr unit s
+par QNet_FL.node[48].app typename "\"App\""
+par QNet_FL.node[48].app nodeId 48
+par QNet_FL.node[48].app trafficRate 0.12587440943807213s
+attr unit s
+par QNet_FL.node[48].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[48].routing nodeId 48
+par QNet_FL.node[48].routing alpha 0.7
+par QNet_FL.node[48].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[48].routing discountFactor 0.9
+par QNet_FL.node[48].routing replayCapacity 100
+par QNet_FL.node[48].routing batchSize 16
+par QNet_FL.node[48].routing hiddenDim 16
+par QNet_FL.node[48].routing epsilon 0.3
+par QNet_FL.node[48].routing flInterval 10s
+attr unit s
+par QNet_FL.node[48].mobility typename "\"Mobility\""
+par QNet_FL.node[48].mobility maxX 1500
+par QNet_FL.node[48].mobility maxY 1500
+par QNet_FL.node[48].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[48] typename "\"NodeFL\""
+par QNet_FL.node[48] nodeId 48
+par QNet_FL.node[48] alpha 0.7
+par QNet_FL.node[48] updateInterval 1s
+attr unit s
+par QNet_FL.node[48] costMetric 1
+par QNet_FL.node[48] trafficRate 0.12587440943807213s
+attr unit s
+par QNet_FL.node[48] flInterval 10s
+attr unit s
+par QNet_FL.node[49].app typename "\"App\""
+par QNet_FL.node[49].app nodeId 49
+par QNet_FL.node[49].app trafficRate 1.275227702223635s
+attr unit s
+par QNet_FL.node[49].routing typename "\"MADRLRouting_FL\""
+par QNet_FL.node[49].routing nodeId 49
+par QNet_FL.node[49].routing alpha 0.7
+par QNet_FL.node[49].routing updateInterval 1s
+attr unit s
+par QNet_FL.node[49].routing discountFactor 0.9
+par QNet_FL.node[49].routing replayCapacity 100
+par QNet_FL.node[49].routing batchSize 16
+par QNet_FL.node[49].routing hiddenDim 16
+par QNet_FL.node[49].routing epsilon 0.3
+par QNet_FL.node[49].routing flInterval 10s
+attr unit s
+par QNet_FL.node[49].mobility typename "\"Mobility\""
+par QNet_FL.node[49].mobility maxX 1500
+par QNet_FL.node[49].mobility maxY 1500
+par QNet_FL.node[49].mobility speed 15mps
+attr unit mps
+par QNet_FL.node[49] typename "\"NodeFL\""
+par QNet_FL.node[49] nodeId 49
+par QNet_FL.node[49] alpha 0.7
+par QNet_FL.node[49] updateInterval 1s
+attr unit s
+par QNet_FL.node[49] costMetric 1
+par QNet_FL.node[49] trafficRate 1.275227702223635s
+attr unit s
+par QNet_FL.node[49] flInterval 10s
+attr unit s
+par QNet_FL typename "\"QNet_FL\""
+par QNet_FL numNodes 50
+

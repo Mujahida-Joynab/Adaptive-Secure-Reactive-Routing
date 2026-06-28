@@ -1,73 +1,58 @@
 #include <omnetpp.h>
 #include <fstream>
 #include <vector>
+#include <string>
+#include <iostream>
 #include "QRoutingMessages_m.h"
 
 using namespace omnetpp;
 
-class CsvCollector : public cSimpleModule, public cListener
-{
+class CsvCollector : public cSimpleModule, public cListener {
   private:
     std::string filename;
-    struct Record {
-        int src;
-        int dest;
-        int hopCount;
-        simtime_t delay;
-    };
-    std::vector<Record> records;
+    std::vector<std::string> records;
+
+    void subscribeRecursive(cModule *parent, const char *classname) {
+        for (cModule::SubmoduleIterator it(parent); !it.end(); ++it) {
+            cModule *child = *it;
+            if (strcmp(child->getClassName(), classname) == 0) {
+                child->subscribe("packetReceived", this);
+                std::cout << "Subscribed to " << child->getFullPath() << endl;
+            }
+            subscribeRecursive(child, classname);
+        }
+    }
 
   public:
-    CsvCollector() {}
-    virtual ~CsvCollector() {}
-
-  protected:
     virtual void initialize() override;
+    virtual void receiveSignal(cComponent *source, simsignal_t, cObject *obj, cObject *) override;
     virtual void finish() override;
-    virtual void receiveSignal(cComponent *source, simsignal_t signalID, cObject *obj, cObject *details) override;
 };
 
 Define_Module(CsvCollector);
 
-void CsvCollector::initialize()
-{
-    // Subscribe to packetReceived signal from all App modules
-    cModule *system = getSystemModule();
-    for (cModule::SubmoduleIterator it(system); !it.end(); ++it) {
-        cModule *mod = *it;
-        if (strcmp(mod->getClassName(), "App") == 0) {
-            mod->subscribe("packetReceived", this);
-        }
-    }
+void CsvCollector::initialize() {
+    subscribeRecursive(getSystemModule(), "App");
     filename = par("csvFile").stringValue();
-    EV << "CsvCollector: writing to " << filename << endl;
 }
 
-void CsvCollector::receiveSignal(cComponent *source, simsignal_t signalID, cObject *obj, cObject *details)
-{
-    if (obj == nullptr) return;
+void CsvCollector::receiveSignal(cComponent *, simsignal_t, cObject *obj, cObject *) {
     QData *data = dynamic_cast<QData*>(obj);
     if (!data) return;
-
-    Record rec;
-    rec.src = data->getSrcId();
-    rec.dest = data->getDestId();
-    rec.hopCount = data->getHopCount();
-    rec.delay = simTime() - data->getTimestamp();
-    records.push_back(rec);
+    char buf[256];
+    snprintf(buf, sizeof(buf), "%d,%d,%d,%d,%.6f",
+             data->getSrcId(),
+             data->getDestId(),
+             data->getSeqNum(),                     // <-- added
+             data->getHopCount(),
+             (simTime() - data->getTimestamp()).dbl());
+    records.push_back(buf);
 }
 
-void CsvCollector::finish()
-{
-    std::ofstream csvFile(filename);
-    if (!csvFile.is_open()) {
-        EV_ERROR << "Cannot open CSV file " << filename << endl;
-        return;
-    }
-    csvFile << "Src,Dest,HopCount,Delay(s)\n";
-    for (auto &r : records) {
-        csvFile << r.src << "," << r.dest << "," << r.hopCount << "," << r.delay << "\n";
-    }
-    csvFile.close();
-    EV << "CsvCollector: wrote " << records.size() << " entries to " << filename << endl;
+void CsvCollector::finish() {
+    std::ofstream out(filename);
+    out << "Src,Dest,Seq,HopCount,Delay(s)\n";
+    for (auto &r : records) out << r << "\n";
+    out.close();
+    std::cout << "CSV written: " << filename << " (" << records.size() << " packets)\n";
 }

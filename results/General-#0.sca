@@ -1,0 +1,147 @@
+version 3
+run General-0-20260629-02:09:39-1819
+attr configname General
+attr datetime 20260629-02:09:39
+attr datetimef 20260629-020939
+attr experiment General
+attr inifile test.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network QNet
+attr processid 1819
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network QNet
+config sim-time-limit 10s
+config **.numNodes 5
+config **.trafficRate exponential(1s)
+config **.mobility.maxX 1500
+config **.mobility.maxY 1500
+config **.mobility.speed 15mps
+config **.collector.csvFile "\"test-output.csv\""
+
+par QNet.collector typename "\"CsvCollector\""
+par QNet.collector csvFile "\"results-${configname}-${repetition}.csv\""
+par QNet.node[0].app typename "\"App\""
+par QNet.node[0].app nodeId 0
+par QNet.node[0].app trafficRate 0.7958745045657755s
+attr unit s
+par QNet.node[0].routing typename "\"QRouting\""
+par QNet.node[0].routing nodeId 0
+par QNet.node[0].routing alpha 0.7
+par QNet.node[0].routing updateInterval 1s
+attr unit s
+par QNet.node[0].routing costMetric 1
+par QNet.node[0].mobility typename "\"Mobility\""
+par QNet.node[0].mobility maxX 1500
+par QNet.node[0].mobility maxY 1500
+par QNet.node[0].mobility speed 15mps
+attr unit mps
+par QNet.node[0] typename "\"Node\""
+par QNet.node[0] nodeId 0
+par QNet.node[0] alpha 0.7
+par QNet.node[0] updateInterval 1s
+attr unit s
+par QNet.node[0] costMetric 1
+par QNet.node[0] trafficRate 0.7958745045657755s
+attr unit s
+par QNet.node[1].app typename "\"App\""
+par QNet.node[1].app nodeId 1
+par QNet.node[1].app trafficRate 0.8985603884839412s
+attr unit s
+par QNet.node[1].routing typename "\"QRouting\""
+par QNet.node[1].routing nodeId 1
+par QNet.node[1].routing alpha 0.7
+par QNet.node[1].routing updateInterval 1s
+attr unit s
+par QNet.node[1].routing costMetric 1
+par QNet.node[1].mobility typename "\"Mobility\""
+par QNet.node[1].mobility maxX 1500
+par QNet.node[1].mobility maxY 1500
+par QNet.node[1].mobility speed 15mps
+attr unit mps
+par QNet.node[1] typename "\"Node\""
+par QNet.node[1] nodeId 1
+par QNet.node[1] alpha 0.7
+par QNet.node[1] updateInterval 1s
+attr unit s
+par QNet.node[1] costMetric 1
+par QNet.node[1] trafficRate 0.8985603884839412s
+attr unit s
+par QNet.node[2].app typename "\"App\""
+par QNet.node[2].app nodeId 2
+par QNet.node[2].app trafficRate 1.2559307580473893s
+attr unit s
+par QNet.node[2].routing typename "\"QRouting\""
+par QNet.node[2].routing nodeId 2
+par QNet.node[2].routing alpha 0.7
+par QNet.node[2].routing updateInterval 1s
+attr unit s
+par QNet.node[2].routing costMetric 1
+par QNet.node[2].mobility typename "\"Mobility\""
+par QNet.node[2].mobility maxX 1500
+par QNet.node[2].mobility maxY 1500
+par QNet.node[2].mobility speed 15mps
+attr unit mps
+par QNet.node[2] typename "\"Node\""
+par QNet.node[2] nodeId 2
+par QNet.node[2] alpha 0.7
+par QNet.node[2] updateInterval 1s
+attr unit s
+par QNet.node[2] costMetric 1
+par QNet.node[2] trafficRate 1.2559307580473893s
+attr unit s
+par QNet.node[3].app typename "\"App\""
+par QNet.node[3].app nodeId 3
+par QNet.node[3].app trafficRate 1.8596042120746687s
+attr unit s
+par QNet.node[3].routing typename "\"QRouting\""
+par QNet.node[3].routing nodeId 3
+par QNet.node[3].routing alpha 0.7
+par QNet.node[3].routing updateInterval 1s
+attr unit s
+par QNet.node[3].routing costMetric 1
+par QNet.node[3].mobility typename "\"Mobility\""
+par QNet.node[3].mobility maxX 1500
+par QNet.node[3].mobility maxY 1500
+par QNet.node[3].mobility speed 15mps
+attr unit mps
+par QNet.node[3] typename "\"Node\""
+par QNet.node[3] nodeId 3
+par QNet.node[3] alpha 0.7
+par QNet.node[3] updateInterval 1s
+attr unit s
+par QNet.node[3] costMetric 1
+par QNet.node[3] trafficRate 1.8596042120746687s
+attr unit s
+par QNet.node[4].app typename "\"App\""
+par QNet.node[4].app nodeId 4
+par QNet.node[4].app trafficRate 0.923223131470796s
+attr unit s
+par QNet.node[4].routing typename "\"QRouting\""
+par QNet.node[4].routing nodeId 4
+par QNet.node[4].routing alpha 0.7
+par QNet.node[4].routing updateInterval 1s
+attr unit s
+par QNet.node[4].routing costMetric 1
+par QNet.node[4].mobility typename "\"Mobility\""
+par QNet.node[4].mobility maxX 1500
+par QNet.node[4].mobility maxY 1500
+par QNet.node[4].mobility speed 15mps
+attr unit mps
+par QNet.node[4] typename "\"Node\""
+par QNet.node[4] nodeId 4
+par QNet.node[4] alpha 0.7
+par QNet.node[4] updateInterval 1s
+attr unit s
+par QNet.node[4] costMetric 1
+par QNet.node[4] trafficRate 0.923223131470796s
+attr unit s
+par QNet typename "\"QNet\""
+par QNet numNodes 5
+
